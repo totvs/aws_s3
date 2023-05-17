@@ -25,7 +25,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "bucket_ss_encrypt
   rule {
     bucket_key_enabled = var.rule["bucket_key_enabled"]
     apply_server_side_encryption_by_default {
-      sse_algorithm     = var.rule.apply_server_side_encryption_by_default["sse_algorithm"]
+      sse_algorithm = var.rule.apply_server_side_encryption_by_default["sse_algorithm"]
     }
   }
 }
