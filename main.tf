@@ -33,7 +33,7 @@ resource "aws_s3_bucket_ownership_controls" "controls" {
 }
 
 resource "aws_s3_bucket_public_access_block" "public_access" {
-  bucket = aws_s3_bucket.bucket.bucket
+  bucket = aws_s3_bucket.bucket.bucket.id
 
   block_public_acls       = false
   block_public_policy     = false
@@ -47,7 +47,7 @@ resource "aws_s3_bucket_acl" "acl" {
     aws_s3_bucket_public_access_block.public_access,
   ]
 
-  bucket = aws_s3_bucket.bucket
+  bucket = aws_s3_bucket.bucket.id
   acl    = "public-read"
 }
 
