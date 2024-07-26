@@ -65,7 +65,7 @@ output "bucket_domain_name" {
   value = aws_s3_bucket.bucket.bucket_domain_name # Bucket domain name. Will be of format bucketname.s3.amazonaws.com
 }
 
-output "website_domain" {
-  value = aws_s3_bucket.bucket.website_domain
+output "website_endpoint" {
+  value = aws_s3_bucket.bucket.website_endpoint
 }
 ```
